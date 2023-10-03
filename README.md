@@ -61,6 +61,11 @@ An example of request to the Indexer API:
 curl -X 'GET' 'http://localhost:8980/health' -H 'accept: application/json'
 ```
 
+Building the app with 
+```bash
+python -m smart_contracts build
+```
+
 #### Setting up GitHub for CI/CD workflow and TestNet deployment
 
   1. Every time you have a change to your smart contract, and when you first initialize the project you need to [build the contract](#initial-setup) and then commit the `smart_contracts/artifacts` folder so the [output stability](https://github.com/algorandfoundation/algokit-cli/blob/main/docs/articles/output_stability.md) tests pass
