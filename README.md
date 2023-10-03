@@ -46,7 +46,7 @@ This project uses [GitHub Actions](https://docs.github.com/en/actions/learn-gith
 ### Remarks
 
 To run on a remote machine via vscode, use port forwarding on ports:
-  - 8980 for sandbox net, 
+  - 8980 for developer API (indexer API, algod API), 
   - 4001 for  and,
   - 4002 for kmd.
 
@@ -56,6 +56,10 @@ To start kmd:
 algokit goal kmd start -t 3600
 ```
 
+An example of request to the Indexer API:
+```bash
+curl -X 'GET' 'http://localhost:8980/health' -H 'accept: application/json'
+```
 
 #### Setting up GitHub for CI/CD workflow and TestNet deployment
 
