@@ -43,6 +43,20 @@ This project has been generated using AlgoKit. See below for default getting sta
 
 This project uses [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/understanding-github-actions) to define CI/CD workflows, which are located in the [`.github/workflows`](./.github/workflows) folder.
 
+### Remarks
+
+To run on a remote machine via vscode, use port forwarding on ports:
+  - 8980 for sandbox net, 
+  - 4001 for  and,
+  - 4002 for kmd.
+
+To start kmd:
+
+```bash
+algokit goal kmd start -t 3600
+```
+
+
 #### Setting up GitHub for CI/CD workflow and TestNet deployment
 
   1. Every time you have a change to your smart contract, and when you first initialize the project you need to [build the contract](#initial-setup) and then commit the `smart_contracts/artifacts` folder so the [output stability](https://github.com/algorandfoundation/algokit-cli/blob/main/docs/articles/output_stability.md) tests pass
